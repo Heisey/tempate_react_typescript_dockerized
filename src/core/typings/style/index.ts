@@ -1,0 +1,1 @@
+export type { ThemeStyles } from './theme'
