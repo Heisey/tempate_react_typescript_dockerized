@@ -1,3 +1,6 @@
+# ?? ╒═══════════════════╕
+# ?? |  Dev Environment  |
+# ?? ╘═══════════════════╛
 FROM node:alpine
 
 WORKDIR '/app'

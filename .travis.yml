@@ -1,0 +1,9 @@
+sudo: required language: node_js
+node_js:
+    - "stable"
+    
+services: 
+    - docker
+before_install: 
+    - docker build -t heisey/template_react_typescript_dockerized -f Dockerfile.dev .script:     
+    - docker run -e CI=true heisey/template_react_typescript_dockerized npm run test -- --coverage
