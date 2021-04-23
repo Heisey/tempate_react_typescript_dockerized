@@ -1,3 +1,8 @@
+sudo: required
+services: -docker
+before_install:
+  - docker build -t heisey/template_react_typescript -f Dockerfile.dev .
+  - docker run -it heisey/template_react_typescript sh
 language: node_js
 node_js:
   - 'node'
