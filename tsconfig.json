@@ -24,8 +24,8 @@
   },
   "include": [
     "./fake.ts",
-    "src", 
-    "config/typescript/*.d.ts"  
+    "./src", 
+    "./config/typescript/*.d.ts"  
   ],
   "exclude": [
     "**/*.stories.tsx"
