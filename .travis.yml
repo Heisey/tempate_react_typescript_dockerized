@@ -6,5 +6,3 @@ services:
 
 script:
   - npm run test
-  - npm run build
-  - docker build -t heisey/template_react_typescript -f Dockerfile .
