@@ -1,10 +1,10 @@
 language: generic
 sudo: required
 services:
+  - npm
   - docker
 
-before_install:
-  - docker build -t heisey/template_react_typescript -f Dockerfile .
-
 script:
-  - docker run -e CI=true heisey/template_react_typescript npm run test -- --coverage
+  - npm run test
+  - npm run build
+  - docker build -t heisey/template_react_typescript -f Dockerfile .
