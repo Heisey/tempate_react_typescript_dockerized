@@ -8,3 +8,16 @@ script:
   - npm run test
   - npm run build
   - docker build -t heisey/template_react_typescript -f Dockerfile .
+
+deploy:
+  provider: elasticbeanstalk
+  region: 'us-west-2'
+  app: 'template_react_typescript'
+  env: 'Templatereacttypescript-env'
+  bucket_name: 'elasticbeanstalk-us-west-2-791520938927'
+  bucket_path: 'template_react_typescript'
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: $AWS_SECRET_KEY
