@@ -17,7 +17,7 @@ deploy:
   bucket_name: 'elasticbeanstalk-us-west-2-791520938927'
   bucket_path: 'template_react_typescript'
   on:
-    branch: master
+    branch: main
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key:
     secure: '$AWS_SECRET_KEY'
